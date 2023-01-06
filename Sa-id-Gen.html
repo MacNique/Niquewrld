@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>hallo</title>
+
+</head>
+<style>
+ header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  top: 0;
+  z-index: 999999999999;
+  transition: 0.3s;
+ }
+ body {
+  text-align: center;
+  background: darkgrey;
+  color:white;
+  font-family: fantasy;
+  
+ }
+ 
+ footer {
+  opacity:40%
+ }
+ 
+ #output{
+  border: 4px solid;
+ }
+</style>
+
+<body>
+ <header>SA ID GENERATOR</header>
+
+ <h1 id="output">Id no will appear here!</h1>
+
+ <form>
+  <p> Select DOB </P>
+  <select name="date" id="date">
+   <option value="01">01</option>
+   <option value="02">02</option>
+   <option value="03">03</option>
+   <option value="04">04</option>
+   <option value="05">05</option>
+   <option value="06">06</option>
+   <option value="07">07</option>
+   <option value="08">08</option>
+   <option value="09">09</option>
+   <option value="10">10</option>
+   <option value="11">11</option>
+   <option value="12">12</option>
+   <option value="13">13</option>
+   <option value="14">14</option>
+   <option value="15">15</option>
+   <option value="16">16</option>
+   <option value="17">17</option>
+   <option value="18">18</option>
+   <option value="19">19</option>
+   <option value="20">20</option>
+   <option value="21">21</option>
+   <option value="22">22</option>
+   <option value="23">23</option>
+   <option value="24">24</option>
+   <option value="25">23</option>
+   <option value="26">26</option>
+   <option value="27">27</option>
+   <option value="28">28</option>
+   <option value="29">29</option>
+   <option value="30">30</option>
+   <option value="31">31</option>
+  </select>
+
+  <select name="month" id="month">
+   <option value="01">JANUARY</option>
+   <option value="02">FEBRUARY</option>
+   <option value="03">MARCH</option>
+   <option value="04">APRIL</option>
+   <option value="05">MAY</option>
+   <option value="06">JUNE</option>
+   <option value="07">JULY</option>
+   <option value="08">AUGUST</option>
+   <option value="09">SEPTEMBER</option>
+   <option value="10">OCTOBER</option>
+   <option value="11">NOVEMBER</option>
+   <option value="12">DECEMBER</option>
+  </select>
+
+  <select name="year" id="year">
+   <option value="96">1996</option>
+   <option value="97">1997</option>
+   <option value="98">1998</option>
+   <option value="99">1999</option>
+   <option value="00">2000</option>
+   <option value="01">2001</option>
+   <option value="02">2002</option>
+   <option value="03">2003</option>
+   <option value="04">2004</option>
+   <option value="05">2005</option>
+   <option value="06">2006</option>
+   <option value="07">2007</option>
+   <option value="08">2008</option>
+   <option value="09">2009</option>
+   <option value="10">2010</option>
+   <option value="11">2011</option>
+   <option value="12">2012</option>
+   <option value="13">2013</option>
+   <option value="14">2014</option>
+   <option value="15">2015</option>
+  </select>
+
+  <p> Select Gender </p>
+  <select id="gender">
+   <option value="1">Male</option>
+   <option value="2">Female</option>
+  </select>
+  <p>Place of Birth</p>
+  <select id="pob">
+   <option value="1">Born in Sa</option>
+   <option value="2">Born Abroad</option>
+  </select>
+  <br>
+  <br>
+  <input type="button" id="process" class="btn" onclick="Basic(this.form)" value="GENERATE"></input>
+ </form>
+ <br>
+ <br>
+ <br>
+<footer>Created By Niquewrld</footer>
+<footer>Follow us on <a href="https://www.facebook.com/profile.php?id=100088943391764">Facebook</a></footer>
+</body>
+<script>
+ function Basic(form)
+
+ {
+  var yy = form.year.value
+  var mm = form.month.value
+  var dd = form.date.value
+
+  if (form.gender.value == 1) {
+   var s1 = Math.floor(Math.random() * (9 - 5) + 5)
+   var s2 = Math.floor(Math.random() * 9)
+   var s3 = Math.floor(Math.random() * 9)
+   var s4 = Math.floor(Math.random() * 9)
+  }
+
+  if (form.gender.value == 2) {
+   var s1 = Math.floor(Math.random() * 4)
+   var s2 = Math.floor(Math.random() * 9)
+   var s3 = Math.floor(Math.random() * 9)
+   var s4 = Math.floor(Math.random() * 9)
+  }
+
+  if (form.pob.value == 1) {
+   var c = 0
+  }
+  if (form.pob.value == 2) {
+
+   var c = 1
+  }
+  var a = 8
+
+  var z = Math.floor(Math.random() * 9)
+  //YYMMDDSSSSCAZ
+  document.getElementById('output').innerHTML = ('<code>' + yy + '' + mm + '' + dd + '' + s1 + '' + s2 + '' + s3 + '' + s4 + '' + c + '' + a + '' + z + '</code>')
+ }
+</script>
+
+</html>
